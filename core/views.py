@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-
+from .models import Users
 
 # Create your views here.
 
@@ -29,3 +29,26 @@ def logout_user(request):
     logout(request)
     return redirect('login')
 
+
+def register(request):
+    if request.method == 'POST':
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        email = request.POST.get('email')
+        passwd1 = request.POST.get('password1')
+        passwd2 = request.POST.get('password2')
+
+        if passwd1 != passwd2:
+            messages.error(request, 'Les mots de passes ne match pas')
+            return redirect('register')
+
+        if Users.object.filter(email=email).exists():
+            messages.error(request, 'Email déjà utilisé')
+            return redirect('register')
+
+        user = Users.object.create_user(email=email, first_name=first_name, last_name=last_name, password=passwd1)
+        user.save()
+        login(request, user)
+        messages.success(request, f'Account created for {first_name}!')
+        return redirect('index')
+    return render(request, "register.html")

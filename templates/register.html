@@ -1,0 +1,130 @@
+{% load static %}
+{% block content %}
+    <head>
+        <link rel="stylesheet" href="../static/css/login.css">
+    </head>
+<main>
+    <div class="box">
+        <div class="inner-box">
+            <div class="forms-wrap">
+                <form autocomplete="off" class="sign-in-form" method="POST">
+                    {% csrf_token %}
+                    <div class="logo">
+                        <img src="../assets/img/LogoV3sansFond.png">
+                        <h4>Finova Solutions</h4>
+                    </div>
+
+                    <div class="heading">
+                        <h2>BrainApp</h2>
+                    </div>
+
+                    <div class="actual-form">
+                        <div class="input-wrap">
+                            <input
+                                    type="text"
+                                    minlength="4"
+                                    class="input-field"
+                                    autocomplete="off"
+                                    name="first_name"
+                                    placeholder="Prenom"
+                                    required
+                            />
+                        </div>
+
+                        <div class="input-wrap">
+                            <input
+                                    type="text"
+                                    minlength="4"
+                                    class="input-field"
+                                    autocomplete="off"
+                                    placeholder="Nom"
+                                    name="last_name"
+                                    required
+                            />
+                        </div>
+
+                        <div class="input-wrap">
+                            <input
+                                    type="email"
+                                    placeholder="Adresse Mail"
+                                    minlength="4"
+                                    class="input-field"
+                                    autocomplete="off"
+                                    name="email"
+                                    required
+                            />
+                        </div>
+
+                        <div class="input-wrap">
+                            <input
+                                    type="password"
+                                    minlength="4"
+                                    class="input-field"
+                                    autocomplete="off"
+                                    placeholder="Mot de passe"
+                                    name="password1"
+                                    required
+                            />
+                        </div>
+
+                        <div class="input-wrap">
+                            <input
+                                    type="password"
+                                    minlength="4"
+                                    class="input-field"
+                                    autocomplete="off"
+                                    placeholder="Confirmer le mot de passe"
+                                    name="password2"
+                                    required
+                            />
+                        </div>
+
+{#                        <div class="input-wrap">#}
+{#                            <input#}
+{#                                    type="date"#}
+{#                                    minlength="4"#}
+{#                                    class="input-field active"#}
+{#                                    autocomplete="off"#}
+{#                                    name="ddn"#}
+{#                                    required#}
+{#                            />#}
+{#                            <label><i class='bx bxs-calendar'></i> Date de naissance</label>#}
+{#                        </div>#}
+
+                        <input type="submit" name="register" value="Connexion" class="sign-btn" />
+                        <a name="login.php" class="annuler">Annuler</a>
+
+                        <p class="text">
+                            Une erreur ? cliquer
+                            <a href="#">ici</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="carousel">
+                <div class="images-wrapper">
+                    <img src="assets/img/final.png" class="image img-1 show" alt="" />
+                </div>
+
+                <div class="text-slider">
+                    <div class="text-wrap">
+                        <div class="text-group">
+                            <h2>Vous y êtes presque</h2>
+                            <h2>Apprennez à votre rythme</h2>
+                            <h2>Une App facile et complète</h2>
+                        </div>
+                    </div>
+
+                    <div class="bullets">
+                        <span class="active" data-value="1"></span>
+                        <span data-value="2"></span>
+                        <span data-value="3"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="assets/js/app.js"></script>
+{% endblock %}
