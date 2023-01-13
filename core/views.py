@@ -50,4 +50,5 @@ def register(request):
         login(request, user)
         messages.success(request, f'Account created for {first_name}!')
         return redirect('index')
+
     return render(request, "register.html")
