@@ -1,0 +1,136 @@
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/login.css" />
+</head>
+<body>
+    <main>
+      <div class="box">
+        <div class="inner-box">
+          <div class="forms-wrap">
+            <form autocomplete="off" class="sign-in-form" method="POST">
+                {% csrf_token %}
+              <div class="logo">
+                <img src="../static/img/LogoV3sansFond.png">
+                <h4>Finova Solutions</h4>
+              </div>
+              <div class="heading">
+                <h2>BrainApp</h2>
+              </div>
+              <div class="actual-form">
+                <div class="input-wrap">
+                  <input
+                    type="email"
+                    placeholder="Adresse Mail"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    name="email"
+                    required
+                  />
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="password"
+                    minlength="4"
+                    placeholder="Mot de passe"
+                    class="input-field"
+                    autocomplete="off"
+                    name="password"
+                    required
+                  />
+                </div>
+
+                <input type="submit" name="login" value="Connexion" class="sign-btn" />
+                <a href="#" class="toggle">Inscription</a>
+
+                <p class="text">Identifiant ou Mot de passe oublié ? cliquer<a href="#">ici</a></p>
+              </div>
+            </form>
+
+{#            <form autocomplete="off" class="sign-up-form" method="POST">#}
+{#              <div class="logo">#}
+{#                <img src="../static/img/LogoV3sansFond.png">#}
+{#                <h4>Finova Solutions</h4>#}
+{#              </div>#}
+{##}
+{#              <div class="heading">#}
+{#                <h2>BrainApp</h2>#}
+{#              </div>#}
+{##}
+{#              <div class="actual-form">#}
+{#                <div class="input-wrap">#}
+{#                  <input#}
+{#                    type="email"#}
+{#                    name="mail"#}
+{#                    minlength="4"#}
+{#                    class="input-field"#}
+{#                    autocomplete="off"#}
+{#                    required#}
+{#                  />#}
+{#                  <label><i class='bx bx-user'></i> Adresse Mail</label>#}
+{#                </div>#}
+{##}
+{#                <div class="input-wrap">#}
+{#                  <input#}
+{#                    type="password"#}
+{#                    name="password"#}
+{#                    minlength="4"#}
+{#                    class="input-field"#}
+{#                    autocomplete="off"#}
+{#                    required#}
+{#                  />#}
+{#                  <label><i class='bx bx-key' ></i> Mot de passe</label>#}
+{#                </div>#}
+{##}
+{#                <div class="cg">#}
+{#                  <input class="cg" type="checkbox" name="cg">#}
+{#                  <p class="text">Vous avez lus et vous acceptez les conditions générales</p>#}
+{#                </div>#}
+{#                <br>#}
+{#                <input type="submit" name="register" value="Confirmer" class="sign-btn" />#}
+{##}
+{#                <a href="#" class="toggle">Connexion</a>#}
+{##}
+{#                <p class="text">#}
+{#                  Besoin d'assistance ? cliquer#}
+{#                  <a href="#">ici</a>#}
+{#                </p>#}
+{#              </div>#}
+{#            </form>#}
+          </div>
+
+          <div class="carousel">
+            <div class="images-wrapper">
+              <img src="assets/img/image4.png" class="image img-1 show" alt="" />
+              <img src="assets/img/image2.png" class="image img-2" alt="" />
+              <img src="assets/img/image1.png" class="image img-3" alt="" />
+            </div>
+
+            <div class="text-slider">
+              <div class="text-wrap">
+                <div class="text-group">
+                  <h2>Des formations 100% en E-Learning</h2>
+                  <h2>Apprennez à votre rythme</h2>
+                  <h2>Une App facile et complète</h2>
+                </div>
+              </div>
+
+              <div class="bullets">
+                <span class="active" data-value="1"></span>
+                <span data-value="2"></span>
+                <span data-value="3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+</body>
+</html>
+{% endblock %}

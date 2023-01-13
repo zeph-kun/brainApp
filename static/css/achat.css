@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+  background-color: #f1f1f1;
+}
+
+.content{
+    position: relative;
+    z-index: 6;
+    width: 100%;
+    height: 92%;
+    top: 100px;
+    background-color: #fff;
+}
+
+.content .text {
+    display: block;
+    text-align: center;
+    width: 80%;
+    height: 250px;
+    margin: 200px auto;
+    border-radius: 30px;
+    text-align: center;
+}
+
+#hero {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 400px;
+}
+.heroimg {
+	display: inline-flex;
+	width: 200px;
+}
+#hero {
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+}
+.hero-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+#hero::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.7;
+	z-index: -1;
+}
+#hero .hero {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 50px;
+	justify-content: flex-start;
+}
+.hero h1 {
+	display: block;
+	font-size: 2rem;
+	color: white;
+}
+@media only screen and (min-width: 768px) {
+	#hero h1 {
+		font-size: 7rem;
+	}
+}
+
+.forma {
+    display: inline-flex;
+    height: 800px;
+    position: relative;
+    left: 0;
+    z-index: 6;
+    background-color: #fff;
+}
+
+.forma .infos {
+    max-width: 1000px;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.forma .infos h1 {
+    font-weight: 650;
+}
+
+.forma .infos h2 {
+    font-weight: 450;
+}
+
+.forma .box {
+    background-color: #fff;
+    width: 550px;
+    height: 560px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: 10px 60px 40px -30px rgba(0, 0, 0, 0.27);
+    transition: 0.3s;
+}
+
+.forma .box:hover {
+    transition: 0.3s;
+    transform: scale(1.01);
+}
+
+.box img {
+    min-width: 100%;
+    height: 260px;
+    border-radius: 20px;
+}
+
+.box h3 {
+    display: block;
+    margin-left: 20px;
+    margin-top: 6px;
+    font-size: 25px;
+}
+
+.box span {
+    color: #717afd;
+}
+
+.box .subtitle {
+    display: inline-block;
+}
+
+.subtitle p {
+    display: block;
+    color: rgb(117, 117, 117);
+    font-weight: 500;
+    margin-left: 20px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.btn {
+    position: absolute;
+    display: inline-flex;
+    margin-left: 240px;
+    margin-top: -50px;
+}
+
+.box .button {
+    display: block;
+    background-color: #151111;
+    height: 45px;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 10px;
+    color: #fff;
+    transition: 0.3s;
+    padding-top: 8px;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.prix {
+    color: #717afd;
+    font-size: 25px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.box .button:hover {
+    transition: 0.3s;
+    background-color: #717afd;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1440px) {
+    .buttons {
+        display: none;
+    }
+}

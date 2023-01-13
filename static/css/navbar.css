@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+  background-color: #f1f1f1;
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    height: 8%;
+    width: 100%;
+    background-color: #fff;
+    align-items: center;
+    z-index: 3;
+}
+
+.finova {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.finova img {
+    height: 80px;
+}
+
+.finova h4 {
+    font-size: 25px;
+}
+
+.buttons {
+    margin-left: 1%;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: rgb(119, 119, 119);
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.buttons a:hover {
+    color: rgb(49, 49, 49);
+}
+
+.buttons .active {
+    display: inline-block;
+    color: rgb(49, 49, 49);
+    background-color: rgba(255, 139, 51, 0.500);
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+}
+
+.buttons .inactive {
+    display: inline-block;
+    color: rgb(119, 119, 119);
+    background-color: #fff;
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+}
+
+.buttons input[type="search"] {
+    margin-left: 10px;
+    background-color: rgb(223, 223, 223);
+    border: 10px solid rgb(223, 223, 223);
+    border-radius: 10px;
+    height: 40px;
+    padding-left: 20px;
+}
+
+.buttons .bx-search-alt {
+    position: absolute;
+    margin-top: 12px;
+    margin-left: -195px;
+}
+
+.user {
+    position: absolute;
+    right: 0;
+    margin-top: 5px;
+    margin-right: 10%;
+    width: 400px;
+    display: inline-flex;
+}
+
+.user .icons{
+    margin-top: 5px;
+    padding-left: -10px;
+}
+
+.icons i {
+    padding: 10px 10px 10px 10px;
+}
+
+.icons .bx {
+    text-decoration: none;
+    color: #101010;
+}
+
+.icons .bx:hover {
+    color: #717afd;
+    background-color: rgb(243, 243, 243);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.infosusr {
+    display: inline-flex;
+    /*padding-left: 20px;*/
+    margin-left: 10px;
+    width: auto;
+    height: auto;
+    padding: 5px 5px;
+    /*background-color: rgb(240, 240, 240);*/
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.infosusr:hover{
+    transition: 0.3s;
+    background-color: rgb(230, 230, 230);
+    cursor: pointer;
+}
+
+.infosusr img {
+    height: 100%;
+}
+
+.infosusr h3 {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+}
+
+.menumessages {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -15px;
+    width: 190px;
+    height: 190px;
+    border-radius: 14px;
+    border: 1px solid rgb(219, 219, 219);
+    background-color: #fff;
+    cursor: default;
+    align-items: center;
+}
+
+.menupanier {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -45px;
+    width: 190px;
+    height: 190px;
+    border-radius: 14px;
+    border: 1px solid rgb(219, 219, 219);
+    background-color: #fff;
+    cursor: default;
+    align-items: center;
+}
+
+.menunotifs {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 25px;
+    width: 190px;
+    height: 190px;
+    border-radius: 14px;
+    border: 1px solid rgb(219, 219, 219);
+    background-color: #fff;
+    cursor: default;
+    align-items: center;
+}
+
+.menuusr {
+    position: absolute;
+    margin-top: 60px;
+    width: 190px;
+    height: 190px;
+    border-radius: 14px;
+    border: 1px solid rgb(219, 219, 219);
+    background-color: #fff;
+    cursor: default;
+    align-items: center;
+}
+
+.menuusr .buttons {
+    display: inline-flex;
+    color: rgb(69, 69, 69);
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.menuusr .buttons:hover {
+    cursor: pointer;
+    transition: 0.1s;
+    transform: scale(1.005);
+    color: #5e65cc;
+}
+
+.menuusr .buttons i {
+    margin-top: 2px;
+}
+
+.menuusr .buttons h4 {
+    font-weight: 400;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.menuusr .separator {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(230, 230, 230);
+}
+
+.inactivemenu {
+    display: none;
+}

@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 
 
@@ -58,3 +59,20 @@ class Section(models.Model):
     about = models.CharField(max_length=250)
     is_active = models.BooleanField()
     id_formation = models.ForeignKey(Formation, on_delete=models.CASCADE)
+
+
+class Users(AbstractBaseUser, PermissionsMixin):
+    first_name = models.CharField(max_length=150)
+    last_name = models.CharField(max_length=150)
+    email = models.EmailField(unique=True)
+    photo = models.ImageField()
+    date = models.DateTimeField(default=timezone.now)
+    is_staff = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
+
+    object = User()
+    REQUIRED_FIELDS = ['first_name', 'last_name']
+    USERNAME_FIELD = 'email'
+
+    def __str__(self):
+        return self.email
