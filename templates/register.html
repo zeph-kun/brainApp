@@ -10,7 +10,7 @@
                 <form autocomplete="off" class="sign-in-form" method="POST">
                     {% csrf_token %}
                     <div class="logo">
-                        <img src="../assets/img/LogoV3sansFond.png">
+                        <img src="../static/img/LogoV3sansFond.png">
                         <h4>Finova Solutions</h4>
                     </div>
 
@@ -92,11 +92,8 @@
 {#                        </div>#}
 
                         <input type="submit" name="register" value="Connexion" class="sign-btn" />
-                        <a name="login.php" class="annuler">Annuler</a>
-
                         <p class="text">
-                            Une erreur ? cliquer
-                            <a href="#">ici</a>
+                            Vous avez déjà un compte ? Cliquez <a href="{% url 'login' %}">ici</a>
                         </p>
                     </div>
                 </form>
@@ -104,7 +101,7 @@
 
             <div class="carousel">
                 <div class="images-wrapper">
-                    <img src="assets/img/final.png" class="image img-1 show" alt="" />
+                    <img src="../static/img/final.png" class="image img-1 show" alt="" />
                 </div>
 
                 <div class="text-slider">
@@ -126,5 +123,5 @@
         </div>
     </div>
 </main>
-<script src="assets/js/app.js"></script>
+<script src="../static/js/app.js"></script>
 {% endblock %}
