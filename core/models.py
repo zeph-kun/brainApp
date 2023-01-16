@@ -69,6 +69,7 @@ class Users(AbstractBaseUser, PermissionsMixin):
     date = models.DateTimeField(default=timezone.now)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
+    #id_formation = models.ForeignKey(Formation, on_delete=models.CASCADE)
 
     object = User()
     REQUIRED_FIELDS = ['first_name', 'last_name']

@@ -9,7 +9,7 @@
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../static/css/navbar.css">
-    <link rel="stylesheet" href="../static/css/index.css">
+{#    <link rel="stylesheet" href="../static/css/index.css">#}
 </head>
 <body>
     <nav class="navbar">
@@ -20,7 +20,7 @@
         <div id="buttons" class="buttons">
             <a class="inactive" href="{% url 'index' %}">Accueil</a>
             <a class="inactive" href="index.php">Brain App</a>
-            <a class="inactive" href="catalogue.php">Catalogue</a>
+            <a class="inactive" href="{% url 'catalog' %}">Catalogue</a>
         </div>
         <div id="user" class="user">
             <div class="icons">
@@ -56,6 +56,10 @@
                         <a href="{% url 'logout' %}">Déconnexion</a>
                     </div>
                 </div>
+            </div>
+            <div class="space"></div>
+            <div class="usr-fn-ln">
+                <a style="padding: 5px 5px 5px 5px;color: rgb(119, 119, 119);background-color: #fff;" class="name">{{ request.user.first_name }} {{ request.user.last_name }}</a>
             </div>
         </div>
 

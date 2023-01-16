@@ -236,3 +236,10 @@ input {
     font-weight: 400;
     font-size: 16px;
 }
+
+.user .usr-fn-ln a {
+    color: rgb(119, 119, 119);
+    background-color: #fff;
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+}

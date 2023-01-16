@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/catalogue.css">
+    <title>Catalogue</title>
+</head>
+    <div id="hero">
+        <div class="hero container"></div>
+    </div>
+    <div class="content">
+        <div class="text">
+            <h1>Des formations 100% e-learning avec <span>BrainApp</span></h1>
+        </div>
+        <div class="check">
+            <h2 class="textintro">BrainApp propose des formations ayant pour objectif de vous donner tous les outils nécessaires pour mieux gérer votre entreprise. L’intégralité des formations sont proposés en e-learning, ce qui vous permettra d’avancer à votre rythme, n’importe où et n’importe quand. Et ce pour une durée illimitée</h2>
+        </div>
+        {% for datas in data %}
+        <div class="tri">
+            <div class="box">
+                <div class="logo">
+                    <img src="../static/img/microsoft.png">
+                </div>
+                <div class="name">{{ datas.name }}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

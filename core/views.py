@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import Users
+from .models import Users, Catalogue
 
 
 @login_required()
@@ -52,3 +52,11 @@ def register(request):
         return redirect('index')
 
     return render(request, "register.html")
+
+
+def catalog(request):
+    data = Catalogue.objects.all()
+    context = {
+        'data': data
+    }
+    return render(request, "catalog.html", context=context)
